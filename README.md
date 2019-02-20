@@ -8,4 +8,4 @@
 ### Новости
 Название | Ссылка | Расположение
 ---|---|---
-Lenta.ru | [lenta.ru](https://lenta.ru/) | [``` lenta ```](lenta)
+Lenta.ru | [lenta.ru](https://lenta.ru/) | [``` lenta.py ```](lenta.py)
