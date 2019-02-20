@@ -1,0 +1,19 @@
+# Кэш
+
+**/__pycache__/
+**/*.pyc
+**/vk_config.json
+**/vk_config.v2.json
+**/*.session
+
+# Ключи
+
+**/keys.json
+
+# Данные
+
+# Библиотеки
+
+# Виртуальное окружение
+
+env/
