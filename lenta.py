@@ -5,20 +5,26 @@ import requests
 from bs4 import BeautifulSoup
 
 
-url = 'https://lenta.ru/rubrics/{}/'
+URL = 'https://lenta.ru/rubrics/{}/'
 categories = ('russia', 'world', 'ussr', 'economics', 'forces', 'science', 'culture', 'sport', 'media', 'style', 'travel', 'life', 'realty')
 
 for category in categories:
+	print('-'*100)
+	print(category)
+	print('-'*100)
+
 	with open('data/lenta/{}.json'.format(category), 'w') as file:
 		# Получаем html-код
 
-		html = requests.get(url.format(category)).text
+		html = requests.get(URL.format(category)).text
 
 		# Парсинг
 
 		soup = BeautifulSoup(html, 'html.parser') # lxml
 
-		divs = soup.findAll('div', {'class': 'item'})
+		section1 = soup.select('div.js-rubric__content')[0]
+		section2 = section1.find('div', {'class': 'js-content'})
+		divs = section2.findAll('div', {'class': 'item'})
 
 		for div in divs:
 			try:
