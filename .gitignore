@@ -1,10 +1,11 @@
 # Кэш
 
-**/__pycache__/
-**/*.pyc
-**/vk_config.json
-**/vk_config.v2.json
-**/*.session
+__pycache__/
+*.pyc
+vk_config.json
+vk_config.v2.json
+*.session
+.vscode
 
 # Ключи
 

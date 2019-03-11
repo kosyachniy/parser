@@ -13,7 +13,7 @@ for category in categories:
 	print(category)
 	print('-'*100)
 
-	with open('data/lenta/{}.json'.format(category), 'w') as file:
+	with open('data/lenta/{}.json'.format(category), 'a') as file:
 		# Получаем html-код
 
 		html = requests.get(URL.format(category)).text
